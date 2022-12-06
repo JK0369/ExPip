@@ -37,9 +37,7 @@ class ViewController: UIViewController {
     view.layer.addSublayer(playerLayer)
     player.play()
     
-    print(123)
     guard AVPictureInPictureController.isPictureInPictureSupported() else { return }
-    print(456)
     pipController = AVPictureInPictureController(playerLayer: playerLayer)
     pipController?.delegate = self
   }
